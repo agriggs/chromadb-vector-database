@@ -2,13 +2,105 @@
 
 Supporting code for the Real Python tutorial [Embeddings and Vector Databases With ChromaDB](https://realpython.com/chromadb-vector-database/). 
 
+## API Keys
+Get OpenAI and Google Gemini API keys and set environment variables
+```
+OPENAI_API_KEY
+GOOGLE_API_KEY
+```
 
+## Python Environment
 ```
 python -m pip install -r requirements.txt
 ```
 
-Run
+## Create the RAG vectors
 ```
 python create_car_review_collection.py
-python llm_car_review_context.py 
+```
+
+## Run GenAI Inference
+
+OpenAI 
+```
+python llm_car_review_context_openai.py 
+```
+
+Gemini 
+```
+python llm_car_review_context_gemini.py 
+```
+
+## Example Outputs
+
+### OpenAI
+```
+Good reviews: 
+ Great value, awesome reliability, I normally dont do reviews, but thought this was worth writing. I own 3 pickups and am not brand dedicated because there are so many nice trucks. I own 3 different trucks. I am drawn to looks first then power and interior. I have notice reading reviews that most want to beat the trucks up, there are no perfect trucks. The Nissan drew me in because it was different and I dont recall any recalls. I owned a Xterra and it was bulletproof and am hoping for the same on my Titan. After looking at all brands and I liked them all, I really like the warranty on my Titan and I got more equipment for the money than the competitors. My first and second tank of fuel at 70 mpg I got 17.5, I was very pleased and when it get broke in I hope for 20. I find it to be very quiet and so were all the others on top of the line. I guess I could beat the truck up with small complaints but sure makes spending my money on it hard to swallow. If the truck last me for 10 years I will be very pleased. I know the ride will get much better as it has in all my cars and trucks in time. I hope you enjoy your new purchase as much as I am enjoying mine., Very  pleased! Great deal! So far so good!, Excellent quality, technology, comfort and value. Way impressed with this vehicle., Things I love: styling, performance, large info center, smooth acceleration, no gas stations, low maintenance costs, incredible sound system, frunk and sub-trunk, rear cargo space, HOV lane, federal tax credit, summons feature, replacement parts seem nicely priced, my first Service Center experience was excellent, my first body shop experience was very good, many people think you are "cool" and environmentally friendly (and you are).          Things I wish were better: fit and finish of body parts (not up to premium car standard), auto pilot still not a wow...needs more development, blind spot monitor is below expectations for such an advance vehicle, difficulty getting in and out of front seat...if you are tall, the front seat goes behind the "B" pillar too far thus the entering and exiting is more difficult. Final Verdict. I love the car. I doubt I would ever buy an ICE car again., Good overall but a lot of others out there., Excellent choice, so far, so good.  I got the S-Line, Premium Plus package and am very happy with it.  Quality it top notch inside and out.  No issues at all, though I've only had it for a month and about 1500 miles., After all the facts and findings over all review is outstanding., Excellent features and performance!  
+###########################################
+OpenAI generated summary with gpt-3.5-turbo of good reviews: 
+Based on the detailed positive reviews provided, the key to great customer satisfaction seems to be a combination of several factors:
+
+1. **Value for Money**: Customers appreciate getting a good deal and feeling like they are getting more equipment for their money compared to competitors.
+
+2. **Reliability**: Customers value reliability and durability in a product. Knowing that the vehicle is well-built and has a good track record can greatly enhance satisfaction.
+
+3. **Performance**: Customers are drawn to vehicles that offer good performance, whether it's in terms of power, acceleration, or fuel efficiency.
+
+4. **Quality**: High-quality materials and technology contribute to a positive experience for customers. Features like a great sound system, comfortable interior, and advanced technology can enhance satisfaction.
+
+5. **Customer Service**: Positive experiences with service centers and body shops can also contribute to overall satisfaction. Good customer service can make the ownership experience more pleasant.
+
+6. **Warranty**: A good warranty can provide peace of mind for customers, knowing that they are covered in case of any issues.
+
+7. **Enjoyment**: Ultimately, customers want to enjoy their purchase and feel good about their decision. If the product meets or exceeds their expectations and brings them joy, they are likely to be highly satisfied.
+
+By focusing on these aspects - value, reliability, performance, quality, customer service, warranty, and overall enjoyment - businesses can enhance customer satisfaction and loyalty.
+###########################################
+Worst reviews: 
+ I have been to the dealership four times and I still have unresolved electrical issues, from the Bluetooth, backup camera, truck wont open, black screen every other trip turning off, clock wont work, seatbelts NOT WORKING !!!!!!!! which really pisses me off as I have a child in the car. So many issues in a short period of time it has become the worst vehicle I have owned unfortunately and to the point where I will drop the car off back at the dealership and purchase something else. I don't have the time to deal with a vehicle of 53k value as if it were pieced together from spare parts from a junkyard. I always read reviews before buying vehicles and I have stuck with Nissan & Infiniti for the past ten years for their workhorse engines as two of my Nissans went to 289k & 377k miles but after this SUV I am jumping ship as soon as possible.
+###########################################
+OpenAI generated summary with gpt-3.5-turbo of the single worst review: 
+The review that has the worst implications about your dealership is the first one, where the customer expresses frustration with unresolved electrical issues in their vehicle. The customer mentions multiple issues such as problems with Bluetooth, backup camera, trunk not opening, black screen, clock not working, and seatbelts not working, which is a serious safety concern, especially since they have a child in the car. The customer also expresses disappointment in the quality of the vehicle, comparing it unfavorably to their previous experiences with Nissan and Infiniti vehicles.     
+
+This review reflects poorly on the dealership because it indicates that the dealership has not been able to effectively address and resolve the customer's concerns despite multiple visits. The customer's dissatisfaction with the vehicle and the dealership's inability to fix the issues in a timely manner may lead to a loss of trust in the dealership's service and the quality of the vehicles they sell. It also suggests a lack of attentiton detail and customer care, which can have long-lasting negative implications for the dealership's reputation and customer loyalty.
+###########################################
+
+```
+
+### Gemini
+```
+Good reviews: 
+ Great value, awesome reliability, I normally dont do reviews, but thought this was worth writing. I own 3 pickups and am not brand dedicated because there are so many nice trucks. I own 3 different trucks. I am drawn to looks first then power and interior. I have notice reading reviews that most want to beat the trucks up, there are no perfect trucks. The Nissan drew me in because it was different and I dont recall any recalls. I owned a Xterra and it was bulletproof and am hoping for the same on my Titan. After looking at all brands and I liked them all, I really like the warranty on my Titan and I got more equipment for the money than the competitors. My first and second tank of fuel at 70 mpg I got 17.5, I was very pleased and when it get broke in I hope for 20. I find it to be very quiet and so were all the others on top of the line. I guess I could beat the truck up with small complaints but sure makes spending my money on it hard to swallow. If the truck last me for 10 years I will be very pleased. I know the ride will get much better as it has in all my cars and trucks in time. I hope you enjoy your new purchase as much as I am enjoying mine., Very  pleased! Great deal! So far so good!, I don't normally review anything, but I feel compelled to write about this car.  With a daily round trip commute of 108 miles, I was tired of the constant trips to gas stations and the expense.  After just a month with this car, I am blown away.  It is the most economical, practical, comfortable commuter vehicle that you can buy.  Never being a big fan of Hyundai, I was skeptical on a number of fronts - reliability/quality, comfort, and ride quality.  This car is ghostly silent with a perfect driving position, comfortable seating and good ergonomics.  Having owned a number of luxury cars and currently an owner of a BMW X5 Diesel (also a great economical SUV) I am really impressed with ride and build quality.  I am currently running 33-34 miles on pure electric and averaging close to 80 MPGs for my commute. I plug it in at night and at work - 110V outlet takes about 8-9 hours.   Too early to give a report on long term reliability, but with 100K powertrain warranty and lifetime battery warranty I am covered for alt least 4 years of commuting. Good looking vehicle - conservatively sharp, without the typical Hybrid space ship looks.   One word - impressed., Excellent quality, technology, comfort and value. Way impressed with this vehicle., Things I love: styling, performance, large info center, smooth acceleration, no gas stations, low maintenance costs, incredible sound system, frunk and sub-trunk, rear cargo space, HOV lane, federal tax credit, summons feature, replacement parts seem nicely priced, my first Service Center experience was excellent, my first body shop experience was very good, many people think you are "cool" and environmentally friendly (and you are).          Things I wish were better: fit and finish of body parts (not up to premium car standard), auto pilot still not a wow...needs more development, blind spot monitor is below expectations for such an advance vehicle, difficulty getting in and out of front seat...if you are tall, the front seat goes behind the "B" pillar too far thus the entering and exiting is more difficult. Final Verdict. I love the car. I doubt I would ever buy an ICE car again., Good overall but a lot of others out there., Excellent choice, so far, so good.  I got the S-Line, Premium Plus package and am very happy with it.  Quality it top notch inside and out.  No issues at all, though I've only had it for a month and about 1500 miles., After all the facts and findings over all review is outstanding.
+###########################################
+Gemini generated summary with gemini-2.5-flash of good reviews: 
+As a customer success employee, analyzing these detailed positive reviews reveals that the key to great customer satisfaction isn't just one thing, but a powerful combination of factors that address both practical needs and emotional desires, often exceeding initial expectations.
+
+Here's a breakdown of the key elements:
+
+1.  **Exceptional Value & Long-Term Peace of Mind:**
+    *   **What customers say:** "Great value," "Great deal," "more equipment for the money," "100K powertrain warranty and lifetime battery warranty I am covered," "no recalls," "low maintenance costs," "federal tax credit," "replacement parts seem nicely priced."
+    *   **Our takeaway:** Customers are looking for more than just a good price; they want to feel they're getting *more* for their money (features, equipment) and that their investment is protected long-term. Robust warranties, a reputation for reliability, and clear communication about potential savings (fuel, maintenance, tax credits) are huge drivers of satisfaction and reduce buyer's remorse.
+
+2.  **Performance & Efficiency that Exceeds Expectations:**
+    *   **What customers say:** "blown away," "most economical, practical, comfortable commuter vehicle," "averaging close to 80 MPGs," "very pleased" with 17.5 MPG (when expecting less), "ghostly silent," "smooth acceleration," "no gas stations."
+    *   **Our takeaway:** When a vehicle performs better than anticipated, especially in areas like fuel economy, quietness, or power, it creates a "wow" factor. Highlighting specific, measurable benefits that solve a customer's pain point (like frequent gas station trips for the commuter) turns a good car into a beloved one.
+
+3.  **Comfort, Quality, and Thoughtful Design:**
+    *   **What customers say:** "awesome reliability," "drawn to looks first then power and interior," "very quiet," "perfect driving position, comfortable seating and good ergonomics," "impressed with ride and build quality," "Excellent quality, technology, comfort," "Quality it top notch inside and out," "styling," "large info center," "incredible sound system."
+    *   **Our takeaway:** While subjective, consistent praise for interior comfort, quietness, ride quality, and overall build quality is crucial. Customers appreciate a well-designed, high-quality interior and exterior that feels good to drive and look at. Even small details like ergonomics or a great sound system contribute significantly.
+
+4.  **A Transformative & Problem-Solving Experience:**
+    *   **What customers say:** "I was tired of the constant trips to gas stations and the expense. After just a month with this car, I am blown away," "I love the car. I doubt I would ever buy an ICE car again," "many people think you are 'cool' and environmentally friendly (and you are)."
+    *   **Our takeaway:** The best satisfaction comes when a vehicle fundamentally changes a customer's daily life for the better or aligns with their values. Whether it's eliminating gas station stops, providing a sense of environmental responsibility, or simply making a long commute enjoyable, connecting the vehicle to a deeper, positive lifestyle change creates immense loyalty.
+
+5.  **Exceptional Post-Sale Service & Support (Our Direct Impact!):**
+    *   **What customers say:** "my first Service Center experience was excellent, my first body shop experience was very good."
+    *   **Our takeaway:** This is where *we* as a dealership shine. Even with a fantastic product, a poor service experience can sour a customer's overall satisfaction. Proactive, efficient, and friendly service (both routine maintenance and unexpected repairs) reinforces the initial positive purchase decision and builds trust, ensuring repeat business and positive word-of-mouth.
+
+In summary, the key to great customer satisfaction is to deliver a vehicle that offers **outstanding value and long-term peace of mind**, **exceeds expectations in performance and efficiency**, provides **superior comfort, quality, and thoughtful design**, and ultimately offers a **transformative, problem-solving experience**. Crucially, all of this must be backed by **exceptional post-sale service and support** from our dealership. When we consistently hit these marks, customers don't just buy a car; they become advocates.
+###########################################
+Worst reviews: 
+ I have been to the dealership four times and I still have unresolved electrical issues, from the Bluetooth, backup camera, truck wont open, black screen every other trip turning off, clock wont work, seatbelts NOT WORKING !!!!!!!! which really pisses me off as I have a child in the car. So many issues in a short period of time it has become the worst vehicle I have owned unfortunately and to the point where I will drop the car off back at the dealership and purchase something else. I don't have the time to deal with a vehicle of 53k value as if it were pieced together from spare parts from a junkyard. I always read reviews before buying vehicles and I have stuck with Nissan & Infiniti for the past ten years for their workhorse engines as two of my Nissans went to 289k & 377k miles but after this SUV I am jumping ship as soon as possible.
+###########################################
 ```

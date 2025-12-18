@@ -1,5 +1,6 @@
 chromadb
 polars
 openai
+google-genai
 more_itertools
 sentence_transformers

@@ -2,8 +2,9 @@ import json
 import os
 
 import chromadb
-from openai import OpenAI
 from chromadb.utils import embedding_functions
+
+from openai import OpenAI
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
@@ -52,18 +53,19 @@ print(reviews_str)
 print("###########################################")
 
 client = OpenAI()
+model = "gpt-3.5-turbo"
 
 good_reviews_analysis = client.chat.completions.create(
-    model="gpt-3.5-turbo",
+    model=model,
     messages=[
         {"role": "system", "content": context.format(reviews_str)},
         {"role": "user", "content": question},
     ],
     temperature=0,
-    n=1,
+    n=1
 )
 
-print("AI-Generated summary of good reviews: ")
+print(f"OpenAI generated summary with {model} of good reviews: ")
 print(good_reviews_analysis.choices[0].message.content)
 print("###########################################")
 
@@ -90,7 +92,7 @@ print(poor_reviews["documents"][0][0])
 print("###########################################")
 
 poor_review_analysis = client.chat.completions.create(
-    model="gpt-3.5-turbo",
+    model=model,
     messages=[
         {"role": "system", "content": context.format(reviews_str)},
         {"role": "user", "content": question},
@@ -99,6 +101,6 @@ poor_review_analysis = client.chat.completions.create(
     n=1,
 )
 
-print("AI-Generated summary of the single worst review: ")
+print(f"OpenAI generated summary with {model} of the single worst review: ")
 print(poor_review_analysis.choices[0].message.content)
 print("###########################################")
