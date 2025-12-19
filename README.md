@@ -48,17 +48,17 @@ python create_car_review_collection.py
 
 OpenAI 
 ```
-python llm_car_review_context_unified.py openai
+python llm_car_review_context.py openai
 ```
 
 Gemini 
 ```
-python llm_car_review_context_unified.py gemini
+python llm_car_review_context.py gemini
 ```
 
 Claude
 ```
-python llm_car_review_context_unified.py claude
+python llm_car_review_context.py claude
 ```
 
 ## Example Outputs
