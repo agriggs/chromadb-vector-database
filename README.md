@@ -1,6 +1,8 @@
-# Embeddings and Vector Databases With ChromaDB
+# Embeddings and Vector Database with LLM Inference
 
-Supporting code for the Real Python tutorial [Embeddings and Vector Databases With ChromaDB](https://realpython.com/chromadb-vector-database/). 
+Code from this overivew [Embeddings and Vector Databases With ChromaDB](https://realpython.com/chromadb-vector-database/). 
+
+Updated to use multiple Large Language Models (LLMs) and removed the sample code that is not relevant.
 
 ## API Keys
 Get OpenAI and Google Gemini API keys and set environment variables
